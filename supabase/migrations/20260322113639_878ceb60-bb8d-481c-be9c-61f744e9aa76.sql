@@ -1,0 +1,1 @@
+ALTER TABLE public.notification_recipients ADD COLUMN bcc_on_reply_sends boolean DEFAULT false;

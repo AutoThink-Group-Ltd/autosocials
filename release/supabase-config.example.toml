@@ -1,0 +1,168 @@
+project_id = "replace-with-own-project-id"
+
+# Both endpoints validate a user session or a scheduler secret themselves.
+[functions.winner-sync]
+verify_jwt = false
+
+[functions.winner-worker]
+verify_jwt = false
+
+[functions.x-oauth-init]
+verify_jwt = true
+
+[functions.x-oauth-callback]
+verify_jwt = false
+
+[functions.x-account]
+verify_jwt = true
+
+[functions.x-fetch-feed]
+verify_jwt = true
+
+[functions.youtube-fetch-feed]
+verify_jwt = true
+
+[functions.tiktok-fetch-feed]
+verify_jwt = true
+
+[functions.sam-social-evidence]
+verify_jwt = true
+
+[functions.instagram-oauth-init]
+verify_jwt = false
+
+[functions.instagram-oauth-callback]
+verify_jwt = false
+
+[functions.instagram-scrape-creator]
+verify_jwt = false
+
+[functions.create-checkout]
+verify_jwt = false
+
+[functions.check-subscription]
+verify_jwt = false
+
+[functions.stripe-webhook]
+verify_jwt = false
+
+# Each endpoint validates its own user JWT or service-only authorization.
+[functions.credit-auto-upgrade]
+verify_jwt = false
+
+[functions.credit-auto-upgrade-settings]
+verify_jwt = false
+
+[functions.credit-auto-upgrade-setup]
+verify_jwt = false
+
+[functions.update-subscription]
+verify_jwt = false
+
+[functions.customer-portal]
+verify_jwt = false
+
+[functions.list-invoices]
+verify_jwt = false
+
+[functions.send-email]
+verify_jwt = false
+
+[functions.provision-sendgrid-subuser]
+verify_jwt = false
+
+[functions.manage-domain-auth]
+verify_jwt = false
+
+[functions.inbound-reply]
+verify_jwt = false
+
+[functions.send-magic-link]
+verify_jwt = false
+
+[functions.send-manager-invitation]
+verify_jwt = false
+
+[functions.generate-outreach-email]
+verify_jwt = false
+
+[functions.agency-referral]
+verify_jwt = false
+
+[functions.phyllo-search]
+verify_jwt = false
+
+[functions.phyllo-profile]
+verify_jwt = false
+
+[functions.sendgrid-webhook]
+verify_jwt = false
+
+[functions.resend-sender-verification]
+verify_jwt = false
+
+[functions.send-test-signature]
+verify_jwt = false
+
+[functions.send-payment-update-email]
+verify_jwt = false
+
+[functions.bulk-enrich-emails]
+verify_jwt = false
+
+[functions.google-analytics-callback]
+verify_jwt = false
+
+[functions.google-analytics-data]
+verify_jwt = false
+
+[functions.google-search-console]
+verify_jwt = false
+
+[functions.disconnect-agency]
+verify_jwt = false
+
+[functions.meta-oauth-init]
+verify_jwt = true
+
+[functions.linkedin-oauth-init]
+verify_jwt = true
+
+[functions.linkedin-oauth-callback]
+verify_jwt = false
+
+[functions.linkedin-account]
+verify_jwt = true
+
+[functions.meta-oauth-callback]
+verify_jwt = false
+
+[functions.tiktok-oauth-init]
+verify_jwt = true
+
+[functions.tiktok-oauth-callback]
+verify_jwt = false
+
+[functions.youtube-oauth-init]
+verify_jwt = false
+
+[functions.youtube-oauth-callback]
+verify_jwt = false
+
+[functions.youtube-account]
+verify_jwt = false
+
+[functions.disconnect-social-account]
+verify_jwt = true
+
+[functions.outreach-worker]
+verify_jwt = false
+
+[functions.outreach-inbound]
+verify_jwt = false
+
+[functions.outreach-events]
+verify_jwt = false
+
+[functions.outreach-enrich]
+verify_jwt = true

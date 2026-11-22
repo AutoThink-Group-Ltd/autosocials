@@ -1,0 +1,1 @@
+-- Public source omits a private workspace rename.

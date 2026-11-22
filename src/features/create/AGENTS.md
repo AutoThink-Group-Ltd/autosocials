@@ -1,0 +1,13 @@
+# Create Content
+
+- The page is a 4-stage wizard (`src/features/create/wizard`, stage persisted on `creative_batches.stage`, pure rules in `src/lib/wizard.ts`) so progress survives navigation and only an explicit Create starts renders.
+- Renders embed each brief's picked brand files (`file_ids`) into the HyperFrames project (Cloud images as base64, AutoToast clips by `media_id`) because AutoToast renders run offline; batch size cap lives only in `content-rules.ts`, and an empty plan must never advance the stage.
+- Each render is a bespoke composition Sam designs from the workspace motion kit (`composition.server.ts`), validated by `composition-rules.ts` before AutoToast; the fixed `buildComposition` template is only the fallback (`design_mode = simple`), because a template cannot reach launch-film quality.
+- Video sharing: `video_shares` tokens + public `/s/$token` page returning short-lived links only for shared variants; share emails render server-side so preview equals the sent email.
+- Video quality: images are inspected once (`media-inspect.server.ts`, columns on `brand_files`) and placed via fixed `as-*` treatments; captions are built deterministically from the voiceover words (`film-qa.ts`), never by the design model; failed designs are reported as `design_mode="failed"`, never silently swapped for `buildComposition`.
+- Video production follows Hamza's HyperFrames playbook (`prompts/playbook/`): facts sheet (`brand_facts`) → one structured build prompt per asset (`src/lib/build-prompt.ts`, checks are test-enforced) → report + review pass → build with approved films as the reference set. Why: quality comes from the steps before the build, not the builder.
+- Film length and layout: AutoToast trims renders to the audio, so the voice track is rewritten to fit (`film-length.ts`) and padded to the exact length, and the finished MP4's length is checked. Text placement follows one shared safe-area spec (`safe-zones.ts`) with a reserved caption strip, and stacking uses z-index, never track index. Official HyperFrames guidance lives in `prompts/hyperframes/`.
+- Create Content is one asset at a time: `DEFAULT_ASSETS` (content-rules) starts at 1 and narratives are single-select unless more are requested; batches stay the storage unit but are not surfaced as a concept. Captions are phrase lines (no per-word highlight) and can be turned off per variant (`creative_variants.captions`).
+- Users see batches as "folders" in the Asset Manager (`AssetManager.tsx`); `creative_batches` stays the storage, and assets move between folders only within one workspace (`moveVariants`).
+
+- Direct reference-video requests prepare a preview. The user approves the preview and exact supported model settings before production.

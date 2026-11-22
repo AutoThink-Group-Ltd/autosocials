@@ -1,0 +1,1 @@
+ALTER TABLE public.creative_variants ADD COLUMN IF NOT EXISTS design_mode text, ADD COLUMN IF NOT EXISTS composition_html text;

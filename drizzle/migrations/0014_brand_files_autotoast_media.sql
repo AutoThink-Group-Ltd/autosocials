@@ -1,0 +1,2 @@
+ALTER TABLE public.brand_files ADD COLUMN IF NOT EXISTS media_id text, ADD COLUMN IF NOT EXISTS transcript_status text, ADD COLUMN IF NOT EXISTS duration_s numeric;
+CREATE INDEX IF NOT EXISTS brand_files_media_id_idx ON public.brand_files(media_id) WHERE media_id IS NOT NULL;

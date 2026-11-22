@@ -1,0 +1,1 @@
+ALTER TABLE public.notification_recipients DROP COLUMN bcc_on_follow_ups;

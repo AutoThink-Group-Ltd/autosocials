@@ -1,0 +1,1 @@
+UPDATE creator_profiles SET avatar_url = REPLACE(avatar_url, '&amp;', '&') WHERE avatar_url LIKE '%&amp;%';

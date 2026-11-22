@@ -1,0 +1,1 @@
+ALTER TABLE public.creative_variants ADD COLUMN IF NOT EXISTS file_ids uuid[] NOT NULL DEFAULT '{}';

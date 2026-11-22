@@ -1,0 +1,1 @@
+ALTER TABLE public.creative_variants ADD COLUMN IF NOT EXISTS captions text NOT NULL DEFAULT 'clean';

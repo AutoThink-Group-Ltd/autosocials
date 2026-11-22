@@ -1,0 +1,12 @@
+import type { OutreachReviewSnapshot } from "@/lib/outreach";
+export type Campaign = { id: string; name: string; brief: string };
+export type Creator = { id: string; name: string; username: string | null; platform: string | null; email: string | null; contact_source: string | null; profile_url: string | null; bio: string | null; subject: string; body: string; version: number; interest: string };
+export type Job = { id: string; creator_id: string; batch_id: string; status: string; subject: string; body: string };
+export type Batch = { id: string; status: string };
+export type Reply = { id: string; outreach_job_id: string | null; from_name: string | null; from_email: string; subject: string | null; body_text: string | null; received_at: string | null };
+export type SenderIdentity = { id: string; sender_name: string; sender_email: string; is_verified: boolean };
+export type DnsRecord = { type: string; host: string; data: string; valid: boolean };
+export type SenderSettings = { platform: { email: string; name: string; ready: boolean }; identities: SenderIdentity[]; domains: { id: string; domain: string; status: string; dns_records: DnsRecord[] }[]; signature_text: string };
+export type OutreachData = { campaigns: Campaign[]; creators: Creator[]; batches: Batch[]; jobs: Job[]; senderIdentities: SenderIdentity[] };
+export type InboxData = { creators: Creator[]; jobs: Job[]; replies: Reply[] };
+export type Snapshot = OutreachReviewSnapshot;

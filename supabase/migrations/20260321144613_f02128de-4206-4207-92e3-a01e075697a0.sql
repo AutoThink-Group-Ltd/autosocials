@@ -1,0 +1,1 @@
+ALTER TABLE public.workspace_sendgrid_config ALTER COLUMN ip_pool SET DEFAULT 'autosocials_pool';

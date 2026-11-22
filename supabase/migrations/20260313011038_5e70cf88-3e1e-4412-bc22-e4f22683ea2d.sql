@@ -1,0 +1,1 @@
+ALTER TABLE public.agency_client_invitations ALTER COLUMN workspace_id DROP NOT NULL;

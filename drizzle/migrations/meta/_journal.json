@@ -1,0 +1,216 @@
+{
+  "version": "7",
+  "dialect": "postgresql",
+  "entries": [
+    {
+      "idx": 0,
+      "version": "7",
+      "when": 1792280178042,
+      "tag": "0000_sam_workspace",
+      "breakpoints": true
+    },
+    {
+      "idx": 1,
+      "version": "7",
+      "when": 1792281321184,
+      "tag": "0001_creative_batches",
+      "breakpoints": true
+    },
+    {
+      "idx": 2,
+      "version": "7",
+      "when": 1792322436389,
+      "tag": "0002_impersonation_events",
+      "breakpoints": true
+    },
+    {
+      "idx": 3,
+      "version": "7",
+      "when": 1792328907410,
+      "tag": "0003_admin_creator_page_stats",
+      "breakpoints": true
+    },
+    {
+      "idx": 4,
+      "version": "7",
+      "when": 1792333895911,
+      "tag": "0004_migration",
+      "breakpoints": true
+    },
+    {
+      "idx": 5,
+      "version": "7",
+      "when": 1792334021452,
+      "tag": "0005_migration",
+      "breakpoints": true
+    },
+    {
+      "idx": 6,
+      "version": "7",
+      "when": 1792335022256,
+      "tag": "0006_admin_overview_stats",
+      "breakpoints": true
+    },
+    {
+      "idx": 7,
+      "version": "7",
+      "when": 1792335172954,
+      "tag": "0007_fix_admin_overview_subs",
+      "breakpoints": true
+    },
+    {
+      "idx": 8,
+      "version": "7",
+      "when": 1792341722314,
+      "tag": "0008_agency_workspace_access",
+      "breakpoints": true
+    },
+    {
+      "idx": 9,
+      "version": "7",
+      "when": 1792341866374,
+      "tag": "0009_agency_profile_on_signup",
+      "breakpoints": true
+    },
+    {
+      "idx": 10,
+      "version": "7",
+      "when": 1792344200588,
+      "tag": "0010_brand_asset_home",
+      "breakpoints": true
+    },
+    {
+      "idx": 11,
+      "version": "7",
+      "when": 1792345136603,
+      "tag": "0011_integrations_elevenlabs",
+      "breakpoints": true
+    },
+    {
+      "idx": 12,
+      "version": "7",
+      "when": 1792349778555,
+      "tag": "0012_batch_rules_render",
+      "breakpoints": true
+    },
+    {
+      "idx": 13,
+      "version": "7",
+      "when": 1792354979736,
+      "tag": "0013_sam_voice_pick",
+      "breakpoints": true
+    },
+    {
+      "idx": 14,
+      "version": "7",
+      "when": 1792365583151,
+      "tag": "0014_brand_files_autotoast_media",
+      "breakpoints": true
+    },
+    {
+      "idx": 15,
+      "version": "7",
+      "when": 1792368433563,
+      "tag": "0015_brand_files_content_hash",
+      "breakpoints": true
+    },
+    {
+      "idx": 16,
+      "version": "7",
+      "when": 1792397221715,
+      "tag": "0016_people_and_invites",
+      "breakpoints": true
+    },
+    {
+      "idx": 17,
+      "version": "7",
+      "when": 1792397235839,
+      "tag": "0017_hide_invite_tokens",
+      "breakpoints": true
+    },
+    {
+      "idx": 18,
+      "version": "7",
+      "when": 1792406709620,
+      "tag": "0018_create_wizard_stages",
+      "breakpoints": true
+    },
+    {
+      "idx": 19,
+      "version": "7",
+      "when": 1792409094652,
+      "tag": "0019_variant_file_ids",
+      "breakpoints": true
+    },
+    {
+      "idx": 20,
+      "version": "7",
+      "when": 1792411525493,
+      "tag": "0020_creative_agency_access",
+      "breakpoints": true
+    },
+    {
+      "idx": 21,
+      "version": "7",
+      "when": 1792436470769,
+      "tag": "0021_variant_custom_design",
+      "breakpoints": true
+    },
+    {
+      "idx": 22,
+      "version": "7",
+      "when": 1792446951850,
+      "tag": "0022_agency_access_studio_and_shares",
+      "breakpoints": true
+    },
+    {
+      "idx": 23,
+      "version": "7",
+      "when": 1792448477336,
+      "tag": "0023_client_separation_security",
+      "breakpoints": true
+    },
+    {
+      "idx": 24,
+      "version": "7",
+      "when": 1792452323747,
+      "tag": "0024_film_quality_manifest",
+      "breakpoints": true
+    },
+    {
+      "idx": 25,
+      "version": "7",
+      "when": 1792509692259,
+      "tag": "0025_playbook_facts_and_build_prompts",
+      "breakpoints": true
+    },
+    {
+      "idx": 26,
+      "version": "7",
+      "when": 1792511805994,
+      "tag": "0026_seo_health",
+      "breakpoints": true
+    },
+    {
+      "idx": 27,
+      "version": "7",
+      "when": 1792881501842,
+      "tag": "0027_render_frame_qa",
+      "breakpoints": true
+    },
+    {
+      "idx": 28,
+      "version": "7",
+      "when": 1792886188327,
+      "tag": "0028_client_link_optional_user",
+      "breakpoints": true
+    },
+    {
+      "idx": 29,
+      "version": "7",
+      "when": 1792980435722,
+      "tag": "0029_variant_captions",
+      "breakpoints": true
+    }
+  ]
+}

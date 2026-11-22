@@ -1,0 +1,1174 @@
+{
+  "checkedAt": "2026-11-18",
+  "source": "https://kie.ai/pricing",
+  "models": [
+    {
+      "name": "Black Forest Labs Flux 2 Flex",
+      "url": "https://kie.ai/flux-2",
+      "usd": 0.07,
+      "unit": "per image",
+      "creditBasis": "14 per image",
+      "priceOptions": 4
+    },
+    {
+      "name": "Black Forest Labs Flux 3 Klein",
+      "url": "https://kie.ai/flux-3",
+      "usd": 0.008,
+      "unit": "per image",
+      "creditBasis": "1.6 per image",
+      "priceOptions": 6
+    },
+    {
+      "name": "Black Forest Labs flux-2 pro",
+      "url": "https://kie.ai/flux-2",
+      "usd": 0.025,
+      "unit": "per image",
+      "creditBasis": "5 per image",
+      "priceOptions": 4
+    },
+    {
+      "name": "Black Forest Labs flux1-kontext",
+      "url": "https://kie.ai/flux-kontext-api",
+      "usd": 0.025,
+      "unit": "per image",
+      "creditBasis": "5 per image",
+      "priceOptions": 2
+    },
+    {
+      "name": "bytedance/seedance-2",
+      "url": "https://kie.ai/seedance-2-0",
+      "usd": 0.057,
+      "unit": "per second",
+      "creditBasis": "11.5 per second",
+      "priceOptions": 8
+    },
+    {
+      "name": "bytedance/seedance-2 fast",
+      "url": "https://kie.ai/seedance-2-0",
+      "usd": 0.034,
+      "unit": "per second",
+      "creditBasis": "6.8 per second",
+      "priceOptions": 4
+    },
+    {
+      "name": "bytedance/seedance-2-5",
+      "url": "https://kie.ai/seedance-2-5",
+      "usd": 0.085,
+      "unit": "per second",
+      "creditBasis": "17 per second",
+      "priceOptions": 6
+    },
+    {
+      "name": "bytedance/seedance-2-5-flash",
+      "url": "https://kie.ai/seedance-2-5-flash",
+      "usd": 0.0575,
+      "unit": "per second",
+      "creditBasis": "11.5 per second",
+      "priceOptions": 4
+    },
+    {
+      "name": "bytedance/seedance-2-mini",
+      "url": "https://kie.ai/seedance-2-0-mini",
+      "usd": 0.012,
+      "unit": "per second",
+      "creditBasis": "2.4 per second",
+      "priceOptions": 4
+    },
+    {
+      "name": "bytedance/seedance-v1-lite",
+      "url": "https://kie.ai/bytedance/seedance-v1",
+      "usd": 0.01,
+      "unit": "per second",
+      "creditBasis": "2 per second",
+      "priceOptions": 6
+    },
+    {
+      "name": "bytedance/seedance-v1-pro",
+      "url": "https://kie.ai/bytedance/seedance-v1",
+      "usd": 0.014,
+      "unit": "per second",
+      "creditBasis": "2.8 per second",
+      "priceOptions": 6
+    },
+    {
+      "name": "bytedance/seedance-v1-pro-fast",
+      "url": "https://kie.ai/bytedance/seedance-v1",
+      "usd": 0.08,
+      "unit": "per video",
+      "creditBasis": "16 per video",
+      "priceOptions": 4
+    },
+    {
+      "name": "Claude-fable-5",
+      "url": "https://kie.ai/claude-fable-5",
+      "usd": 4,
+      "unit": "per million tokens",
+      "creditBasis": "800 per million tokens",
+      "priceOptions": 2
+    },
+    {
+      "name": "Claude-Haiku-4-5",
+      "url": "https://kie.ai/claude-haiku-4-5",
+      "usd": 0.275,
+      "unit": "per million tokens",
+      "creditBasis": "55 per million tokens",
+      "priceOptions": 2
+    },
+    {
+      "name": "claude-haiku-5-5",
+      "url": "https://kie.ai/claude-haiku-5-5",
+      "usd": 0.06,
+      "unit": "per million tokens",
+      "creditBasis": "12 per million tokens",
+      "priceOptions": 2
+    },
+    {
+      "name": "claude-opus-4-5",
+      "url": "https://kie.ai/claude-opus-4-5",
+      "usd": 1.425,
+      "unit": "per million tokens",
+      "creditBasis": "285 per million tokens",
+      "priceOptions": 2
+    },
+    {
+      "name": "Claude-Opus-4-6",
+      "url": "https://kie.ai/claude-opus-4-6",
+      "usd": 1.425,
+      "unit": "per million tokens",
+      "creditBasis": "285 per million tokens",
+      "priceOptions": 2
+    },
+    {
+      "name": "Claude-Opus-4-7",
+      "url": "https://kie.ai/claude-opus-4-7",
+      "usd": 1.425,
+      "unit": "per million tokens",
+      "creditBasis": "285 per million tokens",
+      "priceOptions": 2
+    },
+    {
+      "name": "Claude-Opus-4-8",
+      "url": "https://kie.ai/claude-opus-4-8",
+      "usd": 2,
+      "unit": "per million tokens",
+      "creditBasis": "400 per million tokens",
+      "priceOptions": 2
+    },
+    {
+      "name": "claude-opus-5",
+      "url": "https://kie.ai/claude-opus-5",
+      "usd": 2,
+      "unit": "per million tokens",
+      "creditBasis": "400 per million tokens",
+      "priceOptions": 2
+    },
+    {
+      "name": "claude-opus-5-5",
+      "url": "https://kie.ai/claude-opus-5-5",
+      "usd": 1.6,
+      "unit": "per million tokens",
+      "creditBasis": "320 per million tokens",
+      "priceOptions": 2
+    },
+    {
+      "name": "claude-sonnet-4-5",
+      "url": "https://kie.ai/claude-sonnet-4-5",
+      "usd": 0.85,
+      "unit": "per million tokens",
+      "creditBasis": "170 per million tokens",
+      "priceOptions": 2
+    },
+    {
+      "name": "Claude-Sonnet-4-6",
+      "url": "https://kie.ai/claude-sonnet-4-6",
+      "usd": 0.85,
+      "unit": "per million tokens",
+      "creditBasis": "170 per million tokens",
+      "priceOptions": 2
+    },
+    {
+      "name": "claude-sonnet-5",
+      "url": "https://kie.ai/claude-sonnet-5",
+      "usd": 0.85,
+      "unit": "per million tokens",
+      "creditBasis": "170 per million tokens",
+      "priceOptions": 2
+    },
+    {
+      "name": "claude-sonnet-5-5",
+      "url": "https://kie.ai/claude-sonnet-5-5",
+      "usd": 0.8,
+      "unit": "per million tokens",
+      "creditBasis": "160 per million tokens",
+      "priceOptions": 2
+    },
+    {
+      "name": "DeepSeek V4.1 Flash",
+      "url": "https://kie.ai/deepseek-v4-1-Flash",
+      "usd": 0.0025,
+      "unit": "per million tokens",
+      "creditBasis": "0.5 per million tokens",
+      "priceOptions": 3
+    },
+    {
+      "name": "Elevenlabs Text to Speech",
+      "url": "https://kie.ai/elevenlabs-tts",
+      "usd": 0.03,
+      "unit": "per 1,000 characters",
+      "creditBasis": "6 per 1,000 characters",
+      "priceOptions": 2
+    },
+    {
+      "name": "Elevenlabs V3",
+      "url": "https://kie.ai/elevenlabs/text-to-dialogue-v3",
+      "usd": 0.07,
+      "unit": "per 1,000 characters",
+      "creditBasis": "14 per 1,000 characters",
+      "priceOptions": 1
+    },
+    {
+      "name": "Gemini 2.5 Pro TTS",
+      "url": "https://kie.ai/gemini-2.5-pro-preview-tts",
+      "usd": 0.7,
+      "unit": "per million tokens",
+      "creditBasis": "140 per million tokens",
+      "priceOptions": 2
+    },
+    {
+      "name": "Gemini 3 Pro",
+      "url": "https://kie.ai/gemini-3-pro",
+      "usd": 0.5,
+      "unit": "per million tokens",
+      "creditBasis": "100 per million tokens",
+      "priceOptions": 2
+    },
+    {
+      "name": "Gemini 3.1 Flash TTS",
+      "url": "https://kie.ai/gemini-3.1-flash-tts",
+      "usd": 0.7,
+      "unit": "per million tokens",
+      "creditBasis": "140 per million tokens",
+      "priceOptions": 2
+    },
+    {
+      "name": "Gemini 3.1 Pro",
+      "url": "https://kie.ai/gemini-3-1-pro",
+      "usd": 0.5,
+      "unit": "per million tokens",
+      "creditBasis": "100 per million tokens",
+      "priceOptions": 2
+    },
+    {
+      "name": "Gemini 3.6 Flash",
+      "url": "https://kie.ai/gemini-3-6-flash",
+      "usd": 0.225,
+      "unit": "per million tokens",
+      "creditBasis": "45 per million tokens",
+      "priceOptions": 2
+    },
+    {
+      "name": "Gemini 3.7 Flash",
+      "url": "https://kie.ai/gemini-3-8-flash",
+      "usd": 0.225,
+      "unit": "per million tokens",
+      "creditBasis": "45 per million tokens",
+      "priceOptions": 2
+    },
+    {
+      "name": "Gemini 3.8 Flash",
+      "url": "https://kie.ai/gemini-3-8-flash",
+      "usd": 0.225,
+      "unit": "per million tokens",
+      "creditBasis": "45 per million tokens",
+      "priceOptions": 2
+    },
+    {
+      "name": "Gemini 3.8 Flash TTS",
+      "url": "https://kie.ai/gemini-3.8-flash-tts",
+      "usd": 0.35,
+      "unit": "per million tokens",
+      "creditBasis": "70 per million tokens",
+      "priceOptions": 2
+    },
+    {
+      "name": "Gemini 3.8 Flash-Lite TTS",
+      "url": "https://kie.ai/gemini-3.8-flash-lite-tts",
+      "usd": 0.35,
+      "unit": "per million tokens",
+      "creditBasis": "70 per million tokens",
+      "priceOptions": 2
+    },
+    {
+      "name": "Gemini 4 Argon",
+      "url": "https://kie.ai/gemini-4-argon",
+      "usd": 0.04,
+      "unit": "per million tokens",
+      "creditBasis": "8 per million tokens",
+      "priceOptions": 3
+    },
+    {
+      "name": "Gemini 4 Carbon",
+      "url": "https://kie.ai/gemini-4-carbon",
+      "usd": 0.04,
+      "unit": "per million tokens",
+      "creditBasis": "8 per million tokens",
+      "priceOptions": 3
+    },
+    {
+      "name": "Gemini 4 Hydrogen",
+      "url": "https://kie.ai/gemini-4-hydrogen",
+      "usd": 0.03,
+      "unit": "per million tokens",
+      "creditBasis": "6 per million tokens",
+      "priceOptions": 3
+    },
+    {
+      "name": "gemini-omni-video",
+      "url": "https://kie.ai/gemini-omni",
+      "usd": 0.315,
+      "unit": "per video",
+      "creditBasis": "63 per video",
+      "priceOptions": 15
+    },
+    {
+      "name": "google imagen4",
+      "url": "https://kie.ai/google/imagen4",
+      "usd": 0.02,
+      "unit": "per request",
+      "creditBasis": "4 per request",
+      "priceOptions": 3
+    },
+    {
+      "name": "Google nano banana",
+      "url": "https://kie.ai/nano-banana",
+      "usd": 0.02,
+      "unit": "per image",
+      "creditBasis": "4 per image",
+      "priceOptions": 1
+    },
+    {
+      "name": "Google nano banana 2",
+      "url": "https://kie.ai/nano-banana-2",
+      "usd": 0.04,
+      "unit": "per image",
+      "creditBasis": "8 per image",
+      "priceOptions": 3
+    },
+    {
+      "name": "Google nano banana edit",
+      "url": "https://kie.ai/nano-banana",
+      "usd": 0.02,
+      "unit": "per image",
+      "creditBasis": "4 per image",
+      "priceOptions": 1
+    },
+    {
+      "name": "Google nano banana pro",
+      "url": "https://kie.ai/nano-banana-pro",
+      "usd": 0.09,
+      "unit": "per image",
+      "creditBasis": "18 per image",
+      "priceOptions": 2
+    },
+    {
+      "name": "Google veo 3.1",
+      "url": "https://kie.ai/veo-3-1",
+      "usd": 0.025,
+      "unit": "per video",
+      "creditBasis": "5 per video",
+      "priceOptions": 29
+    },
+    {
+      "name": "google/gemini-omni-flash-1-1",
+      "url": "https://kie.ai/gemini-omni-1-1-flash",
+      "usd": 0.315,
+      "unit": "per video",
+      "creditBasis": "63 per video",
+      "priceOptions": 20
+    },
+    {
+      "name": "google/gemini-omni-flash-1-2",
+      "url": "https://kie.ai/gemini-omni-1-2-flash",
+      "usd": 0.02,
+      "unit": "per second",
+      "creditBasis": "4 per second",
+      "priceOptions": 4
+    },
+    {
+      "name": "google/gemini-omni-flash-1-2-extend",
+      "url": "https://kie.ai/gemini-omni-1-2-flash",
+      "usd": 0.02,
+      "unit": "per second",
+      "creditBasis": "4 per second",
+      "priceOptions": 2
+    },
+    {
+      "name": "gpt image 1.5",
+      "url": "https://kie.ai/gpt-image-1.5",
+      "usd": 0.02,
+      "unit": "per image",
+      "creditBasis": "4 per image",
+      "priceOptions": 4
+    },
+    {
+      "name": "gpt image 2",
+      "url": "https://kie.ai/gpt-image-2",
+      "usd": 0.03,
+      "unit": "per image",
+      "creditBasis": "6 per image",
+      "priceOptions": 6
+    },
+    {
+      "name": "gpt-5-2",
+      "url": "https://kie.ai/gpt-5-2",
+      "usd": 0.44,
+      "unit": "per million tokens",
+      "creditBasis": "87.5 per million tokens",
+      "priceOptions": 2
+    },
+    {
+      "name": "gpt-5.6-luna",
+      "url": "https://kie.ai/gpt-5-6",
+      "usd": 0.0056,
+      "unit": "per million tokens",
+      "creditBasis": "1.12 per million tokens",
+      "priceOptions": 4
+    },
+    {
+      "name": "gpt-5.6-sol",
+      "url": "https://kie.ai/gpt-5-6",
+      "usd": 0.14,
+      "unit": "per million tokens",
+      "creditBasis": "28 per million tokens",
+      "priceOptions": 4
+    },
+    {
+      "name": "gpt-5.6-terra",
+      "url": "https://kie.ai/gpt-5-6",
+      "usd": 0.056,
+      "unit": "per million tokens",
+      "creditBasis": "11.2 per million tokens",
+      "priceOptions": 4
+    },
+    {
+      "name": "gpt-6-1-sol",
+      "url": "https://kie.ai/gpt-6-1-sol",
+      "usd": 0.03,
+      "unit": "per million tokens",
+      "creditBasis": "6 per million tokens",
+      "priceOptions": 4
+    },
+    {
+      "name": "gpt-6-1-terra",
+      "url": "https://kie.ai/gpt-6-1-terra",
+      "usd": 0.015,
+      "unit": "per million tokens",
+      "creditBasis": "3 per million tokens",
+      "priceOptions": 4
+    },
+    {
+      "name": "gpt-6-2-astra",
+      "url": "https://kie.ai/gpt-6-2-astra",
+      "usd": 0.12,
+      "unit": "per million tokens",
+      "creditBasis": "24 per million tokens",
+      "priceOptions": 4
+    },
+    {
+      "name": "gpt-6-2-sol",
+      "url": "https://kie.ai/gpt-6-2-sol",
+      "usd": 0.03,
+      "unit": "per million tokens",
+      "creditBasis": "6 per million tokens",
+      "priceOptions": 4
+    },
+    {
+      "name": "gpt-6-astra",
+      "url": "https://kie.ai/gpt-6-astra",
+      "usd": 0.28,
+      "unit": "per million tokens",
+      "creditBasis": "56 per million tokens",
+      "priceOptions": 4
+    },
+    {
+      "name": "gpt-6-luna",
+      "url": "https://kie.ai/gpt-6-sol-and-luna",
+      "usd": 0.003,
+      "unit": "per million tokens",
+      "creditBasis": "0.6 per million tokens",
+      "priceOptions": 4
+    },
+    {
+      "name": "gpt-6-sol",
+      "url": "https://kie.ai/gpt-6-sol-and-luna",
+      "usd": 0.06,
+      "unit": "per million tokens",
+      "creditBasis": "12 per million tokens",
+      "priceOptions": 4
+    },
+    {
+      "name": "gpt-image-2-5-flare",
+      "url": "https://kie.ai/gpt-image-2-5",
+      "usd": 0.03,
+      "unit": "per image",
+      "creditBasis": "6 per image",
+      "priceOptions": 6
+    },
+    {
+      "name": "gpt-image-2-5-sunburst",
+      "url": "https://kie.ai/gpt-image-2-5",
+      "usd": 0.03,
+      "unit": "per image",
+      "creditBasis": "6 per image",
+      "priceOptions": 6
+    },
+    {
+      "name": "gpt-image-2-6-economy",
+      "url": "https://kie.ai/gpt-image-2-6",
+      "usd": 0.025,
+      "unit": "per image",
+      "creditBasis": "5 per image",
+      "priceOptions": 2
+    },
+    {
+      "name": "gpt-image-2-6-flare",
+      "url": "https://kie.ai/gpt-image-2-6",
+      "usd": 0.18,
+      "unit": "per million tokens",
+      "creditBasis": "36 per million tokens",
+      "priceOptions": 11
+    },
+    {
+      "name": "gpt-image-2-6-sunburst",
+      "url": "https://kie.ai/gpt-image-2-6",
+      "usd": 0.18,
+      "unit": "per million tokens",
+      "creditBasis": "36 per million tokens",
+      "priceOptions": 11
+    },
+    {
+      "name": "grok-4-5",
+      "url": "https://kie.ai/grok-4-5",
+      "usd": 0.12,
+      "unit": "per million tokens",
+      "creditBasis": "24 per million tokens",
+      "priceOptions": 3
+    },
+    {
+      "name": "grok-4-6",
+      "url": "https://kie.ai/grok-4-6",
+      "usd": 0.2,
+      "unit": "per million tokens",
+      "creditBasis": "40 per million tokens",
+      "priceOptions": 3
+    },
+    {
+      "name": "grok-4-7",
+      "url": "https://kie.ai/grok-4-7",
+      "usd": 0.2,
+      "unit": "per million tokens",
+      "creditBasis": "40 per million tokens",
+      "priceOptions": 3
+    },
+    {
+      "name": "grok-imagine",
+      "url": "https://kie.ai/grok-imagine",
+      "usd": 0.012,
+      "unit": "per second",
+      "creditBasis": "2.4 per second",
+      "priceOptions": 12
+    },
+    {
+      "name": "grok-imagine-image-2-0",
+      "url": "https://kie.ai/grok-imagine-image-2",
+      "usd": 0.02,
+      "unit": "per image",
+      "creditBasis": "4 per image",
+      "priceOptions": 4
+    },
+    {
+      "name": "grok-imagine-video-1-5-preview",
+      "url": "https://kie.ai/grok-imagine-video-1.5",
+      "usd": 0.012,
+      "unit": "per second",
+      "creditBasis": "2.4 per second",
+      "priceOptions": 3
+    },
+    {
+      "name": "grok-imagine/extend",
+      "url": "https://kie.ai/grok-imagine",
+      "usd": 0.072,
+      "unit": "per video",
+      "creditBasis": "14.4 per video",
+      "priceOptions": 4
+    },
+    {
+      "name": "hailuo 02",
+      "url": "https://kie.ai/hailuo-api",
+      "usd": 0.06,
+      "unit": "per video",
+      "creditBasis": "12 per video",
+      "priceOptions": 8
+    },
+    {
+      "name": "hailuo 2.3",
+      "url": "https://kie.ai/hailuo-2-3",
+      "usd": 0.15,
+      "unit": "per video",
+      "creditBasis": "30 per video",
+      "priceOptions": 6
+    },
+    {
+      "name": "HappyHorse-1.0",
+      "url": "https://kie.ai/happyhorse-1-0",
+      "usd": 0.14,
+      "unit": "per second",
+      "creditBasis": "28 per second",
+      "priceOptions": 8
+    },
+    {
+      "name": "HappyHorse-1.1",
+      "url": "https://kie.ai/happyhorse-1-1",
+      "usd": 0.1125,
+      "unit": "per second",
+      "creditBasis": "22.5 per second",
+      "priceOptions": 6
+    },
+    {
+      "name": "ideogram character",
+      "url": "https://kie.ai/ideogram/character",
+      "usd": 0.06,
+      "unit": "per image",
+      "creditBasis": "12 per image",
+      "priceOptions": 3
+    },
+    {
+      "name": "ideogram character-edit",
+      "url": "https://kie.ai/ideogram/character",
+      "usd": 0.06,
+      "unit": "per image",
+      "creditBasis": "12 per image",
+      "priceOptions": 3
+    },
+    {
+      "name": "ideogram character-remix",
+      "url": "https://kie.ai/ideogram/character",
+      "usd": 0.06,
+      "unit": "per image",
+      "creditBasis": "12 per image",
+      "priceOptions": 3
+    },
+    {
+      "name": "ideogram v3",
+      "url": "https://kie.ai/ideogram/v3",
+      "usd": 0.0175,
+      "unit": "per image",
+      "creditBasis": "3.5 per image",
+      "priceOptions": 3
+    },
+    {
+      "name": "ideogram v3-edit",
+      "url": "https://kie.ai/ideogram/v3",
+      "usd": 0.0175,
+      "unit": "per image",
+      "creditBasis": "3.5 per image",
+      "priceOptions": 3
+    },
+    {
+      "name": "ideogram v3-remix",
+      "url": "https://kie.ai/ideogram/v3",
+      "usd": 0.0175,
+      "unit": "per image",
+      "creditBasis": "3.5 per image",
+      "priceOptions": 3
+    },
+    {
+      "name": "Kie Image Upscale",
+      "url": "https://kie.ai/image-upscaler",
+      "usd": 0.0075,
+      "unit": "per image",
+      "creditBasis": "1.5 per image",
+      "priceOptions": 3
+    },
+    {
+      "name": "KIE Video Upscale",
+      "url": "https://kie.ai/video-upscaler",
+      "usd": 0.0075,
+      "unit": "per second",
+      "creditBasis": "1.5 per second",
+      "priceOptions": 3
+    },
+    {
+      "name": "Kimi K3",
+      "url": "https://kie.ai/kimi-k3",
+      "usd": 0.24,
+      "unit": "per million tokens",
+      "creditBasis": "48 per million tokens",
+      "priceOptions": 3
+    },
+    {
+      "name": "Kimi K3.1 Pro",
+      "url": "https://kie.ai/kimi-k3-1-pro",
+      "usd": 0.08,
+      "unit": "per million tokens",
+      "creditBasis": "16 per million tokens",
+      "priceOptions": 3
+    },
+    {
+      "name": "Kling 2.1",
+      "url": "https://kie.ai/kling/v2-1",
+      "usd": 0.2525,
+      "unit": "per video",
+      "creditBasis": "50.5 per video",
+      "priceOptions": 8
+    },
+    {
+      "name": "kling 2.5 turbo",
+      "url": "https://kie.ai/kling-2-5",
+      "usd": 0.315,
+      "unit": "per video",
+      "creditBasis": "63 per video",
+      "priceOptions": 4
+    },
+    {
+      "name": "kling 2.6",
+      "url": "https://kie.ai/kling-2-6",
+      "usd": 0.315,
+      "unit": "per video",
+      "creditBasis": "63 per video",
+      "priceOptions": 8
+    },
+    {
+      "name": "kling 2.6 motion control",
+      "url": "https://kie.ai/kling-2.6-motion-control",
+      "usd": 0.063,
+      "unit": "per second",
+      "creditBasis": "12.6 per second",
+      "priceOptions": 2
+    },
+    {
+      "name": "Kling 3.0",
+      "url": "https://kie.ai/kling-3-0",
+      "usd": 0.0755,
+      "unit": "per second",
+      "creditBasis": "15.1 per second",
+      "priceOptions": 6
+    },
+    {
+      "name": "kling 3.0 motion control",
+      "url": "https://kie.ai/kling-3-motion-control",
+      "usd": 0.1135,
+      "unit": "per second",
+      "creditBasis": "22.7 per second",
+      "priceOptions": 2
+    },
+    {
+      "name": "kling 3.0 omni",
+      "url": "https://kie.ai/kling-o3",
+      "usd": 0.0755,
+      "unit": "per second",
+      "creditBasis": "15.1 per second",
+      "priceOptions": 24
+    },
+    {
+      "name": "kling 3.0 turbo",
+      "url": "https://kie.ai/kling-3-0-turbo",
+      "usd": 0.101,
+      "unit": "per second",
+      "creditBasis": "20.2 per second",
+      "priceOptions": 4
+    },
+    {
+      "name": "kling 4.0",
+      "url": "https://kie.ai/kling-4-0",
+      "usd": 0.085,
+      "unit": "per second",
+      "creditBasis": "17 per second",
+      "priceOptions": 6
+    },
+    {
+      "name": "kling 4.0 flash",
+      "url": "https://kie.ai/kling-4-0-flash",
+      "usd": 0.0565,
+      "unit": "per second",
+      "creditBasis": "11.3 per second",
+      "priceOptions": 3
+    },
+    {
+      "name": "Kling AI Avatar",
+      "url": "https://kie.ai/kling-ai-avatar",
+      "usd": 0.0505,
+      "unit": "per second",
+      "creditBasis": "10.1 per second",
+      "priceOptions": 2
+    },
+    {
+      "name": "kling image 4.0",
+      "url": "https://kie.ai/kling-image-4-0",
+      "usd": 0.0025,
+      "unit": "per image",
+      "creditBasis": "0.5 per image",
+      "priceOptions": 13
+    },
+    {
+      "name": "MeiGen-AI InfiniteTalk",
+      "url": "https://kie.ai/infinitalk",
+      "usd": 0.015,
+      "unit": "per second",
+      "creditBasis": "3 per second",
+      "priceOptions": 2
+    },
+    {
+      "name": "MiniMax H3",
+      "url": "https://kie.ai/minimax-h3",
+      "usd": 0.02,
+      "unit": "per image",
+      "creditBasis": "4 per image",
+      "priceOptions": 9
+    },
+    {
+      "name": "MiniMax H3 Image",
+      "url": "https://kie.ai/minimax-h3-image",
+      "usd": 0.0025,
+      "unit": "per image",
+      "creditBasis": "0.5 per image",
+      "priceOptions": 5
+    },
+    {
+      "name": "nano-banana-2-1",
+      "url": "https://kie.ai/nano-banana-2-1",
+      "usd": 0.02,
+      "unit": "per image",
+      "creditBasis": "4 per image",
+      "priceOptions": 3
+    },
+    {
+      "name": "nano-banana-2-lite",
+      "url": "https://kie.ai/nano-banana-2-lite",
+      "usd": 0.02,
+      "unit": "per image",
+      "creditBasis": "4 per image",
+      "priceOptions": 1
+    },
+    {
+      "name": "nemotron-3-5-transcribe",
+      "url": "https://kie.ai/nemotron-3-5-transcribe",
+      "usd": 0.0015,
+      "unit": "per minute",
+      "creditBasis": "0.3 per minute",
+      "priceOptions": 1
+    },
+    {
+      "name": "omnihuman-1-5",
+      "url": "https://kie.ai/omnihuman-1-5",
+      "usd": 0.135,
+      "unit": "per second",
+      "creditBasis": "27 per second",
+      "priceOptions": 1
+    },
+    {
+      "name": "omnihuman-2-0",
+      "url": "https://kie.ai/omnihuman-2-0",
+      "usd": 0.07,
+      "unit": "per second",
+      "creditBasis": "14 per second",
+      "priceOptions": 1
+    },
+    {
+      "name": "OpenAI 4o image",
+      "url": "https://kie.ai/4o-image-api",
+      "usd": 0.03,
+      "unit": "per image",
+      "creditBasis": "6 per image",
+      "priceOptions": 1
+    },
+    {
+      "name": "pixverse-v6",
+      "url": "https://kie.ai/pixverse-v6",
+      "usd": 0.02,
+      "unit": "per second",
+      "creditBasis": "4 per second",
+      "priceOptions": 32
+    },
+    {
+      "name": "pixverse-v6-max",
+      "url": "https://kie.ai/pixverse-v6-max",
+      "usd": 0.024,
+      "unit": "per second",
+      "creditBasis": "4.8 per second",
+      "priceOptions": 8
+    },
+    {
+      "name": "Qwen Image",
+      "url": "https://kie.ai/qwen-image",
+      "usd": 0.02,
+      "unit": "per megapixel",
+      "creditBasis": "4 per megapixel",
+      "priceOptions": 2
+    },
+    {
+      "name": "Qwen Image 2",
+      "url": "https://kie.ai/qwen-image-2",
+      "usd": 0.028,
+      "unit": "per image",
+      "creditBasis": "5.6 per image",
+      "priceOptions": 2
+    },
+    {
+      "name": "Qwen image 3.0",
+      "url": "https://kie.ai/qwen-image-3",
+      "usd": 0.0025,
+      "unit": "per image",
+      "creditBasis": "0.5 per image",
+      "priceOptions": 6
+    },
+    {
+      "name": "Qwen image 3.0 Pro",
+      "url": "https://kie.ai/qwen-image-3",
+      "usd": 0.0025,
+      "unit": "per image",
+      "creditBasis": "0.5 per image",
+      "priceOptions": 6
+    },
+    {
+      "name": "Qwen image-edit",
+      "url": "https://kie.ai/qwen/image-edit",
+      "usd": 0.025,
+      "unit": "per megapixel",
+      "creditBasis": "5 per megapixel",
+      "priceOptions": 1
+    },
+    {
+      "name": "Qwen z-image",
+      "url": "https://kie.ai/z-image",
+      "usd": 0.004,
+      "unit": "per image",
+      "creditBasis": "0.8 per image",
+      "priceOptions": 1
+    },
+    {
+      "name": "Qwen-Image-2.1",
+      "url": "https://kie.ai/qwen-image-2.1",
+      "usd": 0.02,
+      "unit": "per image",
+      "creditBasis": "4 per image",
+      "priceOptions": 4
+    },
+    {
+      "name": "Recraft Crisp Upscale",
+      "url": "https://kie.ai/recraft-crisp-upscale",
+      "usd": 0.0025,
+      "unit": "per image",
+      "creditBasis": "0.5 per image",
+      "priceOptions": 1
+    },
+    {
+      "name": "Recraft Remove Background",
+      "url": "https://kie.ai/recraft-remove-background",
+      "usd": 0.005,
+      "unit": "per image",
+      "creditBasis": "1 per image",
+      "priceOptions": 1
+    },
+    {
+      "name": "Runway",
+      "url": "https://kie.ai/runway-api",
+      "usd": 0.06,
+      "unit": "per video",
+      "creditBasis": "12 per video",
+      "priceOptions": 8
+    },
+    {
+      "name": "seedream 3.0",
+      "url": "https://kie.ai/seedream",
+      "usd": 0.0175,
+      "unit": "per image",
+      "creditBasis": "3.5 per image",
+      "priceOptions": 1
+    },
+    {
+      "name": "seedream 4.5",
+      "url": "https://kie.ai/seedream-4-5",
+      "usd": 0.0325,
+      "unit": "per image",
+      "creditBasis": "6.5 per image",
+      "priceOptions": 2
+    },
+    {
+      "name": "seedream 5 Flash",
+      "url": "https://kie.ai/seedream-5-0-flash",
+      "usd": 0.0162,
+      "unit": "per image",
+      "creditBasis": "3.24 per image",
+      "priceOptions": 9
+    },
+    {
+      "name": "seedream 5 Pro",
+      "url": "https://kie.ai/seedream-5-0-pro",
+      "usd": 0.0025,
+      "unit": "per image",
+      "creditBasis": "0.5 per image",
+      "priceOptions": 8
+    },
+    {
+      "name": "seedream 5.0 Lite",
+      "url": "https://kie.ai/seedream5-0-lite",
+      "usd": 0.0275,
+      "unit": "per image",
+      "creditBasis": "5.5 per image",
+      "priceOptions": 2
+    },
+    {
+      "name": "seedream 5.5",
+      "url": "https://kie.ai/seedream-5-5",
+      "usd": 0.0072,
+      "unit": "per image",
+      "creditBasis": "1.44 per image",
+      "priceOptions": 10
+    },
+    {
+      "name": "seedream v4",
+      "url": "https://kie.ai/seedream-api",
+      "usd": 0.025,
+      "unit": "per image",
+      "creditBasis": "5 per image",
+      "priceOptions": 2
+    },
+    {
+      "name": "Suno",
+      "url": "https://kie.ai/suno-api",
+      "usd": 0.002,
+      "unit": "per request",
+      "creditBasis": "0.4 per request",
+      "priceOptions": 21
+    },
+    {
+      "name": "Topaz Image Upscaler",
+      "url": "https://kie.ai/topaz-image-upscale",
+      "usd": 0.05,
+      "unit": "per image",
+      "creditBasis": "10 per image",
+      "priceOptions": 2
+    },
+    {
+      "name": "Topaz Video Upscaler",
+      "url": "https://kie.ai/topaz-video-upscaler",
+      "usd": 0.04,
+      "unit": "per second",
+      "creditBasis": "8 per second",
+      "priceOptions": 2
+    },
+    {
+      "name": "Vidu Q4",
+      "url": "https://kie.ai/vidu-q4",
+      "usd": 0.036,
+      "unit": "per second",
+      "creditBasis": "7.2 per second",
+      "priceOptions": 10
+    },
+    {
+      "name": "volcengine",
+      "url": "https://kie.ai/volcengine-video-to-video-lip-sync",
+      "usd": 0.04,
+      "unit": "per second",
+      "creditBasis": "8 per second",
+      "priceOptions": 1
+    },
+    {
+      "name": "Wan 2.2 A14B Turbo API image to Video",
+      "url": "https://kie.ai/wan/v2-2",
+      "usd": 0.04,
+      "unit": "per second",
+      "creditBasis": "8 per second",
+      "priceOptions": 2
+    },
+    {
+      "name": "Wan 2.2 A14B Turbo API Speech to Video",
+      "url": "https://kie.ai/wan-speech-to-video-turbo",
+      "usd": 0.06,
+      "unit": "per second",
+      "creditBasis": "12 per second",
+      "priceOptions": 3
+    },
+    {
+      "name": "Wan 2.2 A14B Turbo API text to Video",
+      "url": "https://kie.ai/wan/v2-2",
+      "usd": 0.04,
+      "unit": "per second",
+      "creditBasis": "8 per second",
+      "priceOptions": 2
+    },
+    {
+      "name": "wan 2.2 Animate",
+      "url": "https://kie.ai/wan-animate",
+      "usd": 0.03,
+      "unit": "per second",
+      "creditBasis": "6 per second",
+      "priceOptions": 4
+    },
+    {
+      "name": "wan 2.5",
+      "url": "https://kie.ai/wan-2-5",
+      "usd": 0.3,
+      "unit": "per video",
+      "creditBasis": "60 per video",
+      "priceOptions": 8
+    },
+    {
+      "name": "wan 2.6",
+      "url": "https://kie.ai/wan-2-6",
+      "usd": 0.35,
+      "unit": "per video",
+      "creditBasis": "70 per video",
+      "priceOptions": 16
+    },
+    {
+      "name": "wan 2.6 flash",
+      "url": "https://kie.ai/wan-2-6-flash",
+      "usd": 0.1,
+      "unit": "per video",
+      "creditBasis": "20 per video",
+      "priceOptions": 20
+    },
+    {
+      "name": "wan 2.7 image",
+      "url": "https://kie.ai/wan-2-7-image",
+      "usd": 0.024,
+      "unit": "per image",
+      "creditBasis": "4.8 per image",
+      "priceOptions": 1
+    },
+    {
+      "name": "wan 2.7 image pro",
+      "url": "https://kie.ai/wan-2-7-image",
+      "usd": 0.06,
+      "unit": "per image",
+      "creditBasis": "12 per image",
+      "priceOptions": 1
+    },
+    {
+      "name": "wan 2.7 video",
+      "url": "https://kie.ai/wan-2-7-video",
+      "usd": 0.08,
+      "unit": "per second",
+      "creditBasis": "16 per second",
+      "priceOptions": 8
+    },
+    {
+      "name": "wan 3.0 video",
+      "url": "https://kie.ai/wan3.0-video",
+      "usd": 0.04,
+      "unit": "per second",
+      "creditBasis": "8 per second",
+      "priceOptions": 3
+    },
+    {
+      "name": "wan3.0 video prime",
+      "url": "https://kie.ai/wan3.0-video-prime",
+      "usd": 0.0612,
+      "unit": "per second",
+      "creditBasis": "12.2 per second",
+      "priceOptions": 3
+    }
+  ]
+}

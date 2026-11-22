@@ -1,0 +1,17 @@
+node_modules/
+.output/
+.tanstack/
+dist/
+coverage/
+.env
+.env.*
+!.env.example
+*.local
+*.pem
+*.key
+*.p12
+*.pfx
+release/self-host.env
+supabase/.temp/
+supabase/.branches/
+supabase/config.toml

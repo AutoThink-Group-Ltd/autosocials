@@ -1,0 +1,15 @@
+services:
+  autosocials:
+    build:
+      context: ..
+      dockerfile: release/Dockerfile
+      args:
+        VITE_SUPABASE_URL: ${VITE_SUPABASE_URL:?set public URL}
+        VITE_SUPABASE_PUBLISHABLE_KEY: ${VITE_SUPABASE_PUBLISHABLE_KEY:?set public key}
+        VITE_SUPABASE_PROJECT_ID: ${VITE_SUPABASE_PROJECT_ID:?set project ID}
+    env_file:
+      - path: ./self-host.env
+        required: true
+    ports:
+      - "127.0.0.1:3000:3000"
+    restart: unless-stopped

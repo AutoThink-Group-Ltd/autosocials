@@ -1,0 +1,6 @@
+ALTER TABLE public.schedule_confirmation_outbox DROP CONSTRAINT schedule_confirmation_outbox_request_id_fkey;
+ALTER TABLE public.schedule_confirmation_outbox ADD CONSTRAINT schedule_confirmation_outbox_request_id_fkey FOREIGN KEY (request_id) REFERENCES public.creation_schedule_requests(request_id) ON DELETE CASCADE;
+ALTER TABLE public.schedule_confirmation_outbox DROP CONSTRAINT schedule_confirmation_outbox_workspace_id_fkey;
+ALTER TABLE public.schedule_confirmation_outbox ADD CONSTRAINT schedule_confirmation_outbox_workspace_id_fkey FOREIGN KEY (workspace_id) REFERENCES public.workspaces(id) ON DELETE CASCADE;
+ALTER TABLE public.schedule_confirmation_items DROP CONSTRAINT schedule_confirmation_items_request_id_post_id_fkey;
+ALTER TABLE public.schedule_confirmation_items ADD CONSTRAINT schedule_confirmation_items_request_id_post_id_fkey FOREIGN KEY (request_id, post_id) REFERENCES public.creation_schedule_receipts(request_id, post_id) ON DELETE CASCADE;

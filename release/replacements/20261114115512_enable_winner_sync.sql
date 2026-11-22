@@ -1,0 +1,1 @@
+-- Self-host: winner-sync remains disabled. Configure and enable an installation-specific scheduler only after review.

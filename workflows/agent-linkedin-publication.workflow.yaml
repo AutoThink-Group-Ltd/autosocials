@@ -1,0 +1,15 @@
+id: agent.linkedin_publication
+trigger: an authenticated external MCP connection prepares or queues an organic LinkedIn post
+registry: src/lib/agent-access-contract.ts
+steps:
+  - Resolve the connected workspace and verify the caller, connection scopes and channel.
+  - Save supplied copy in a draft and show a dated preview of the exact text and destination.
+  - Load the active standing permission, then queue the preview with a stable idempotency key.
+  - At dispatch, check the current connection, workspace approval, destination and unchanged text before the submission marker.
+  - Report the recorded provider outcome. Hold a request that no longer has authority for the owner to review.
+safety:
+  - Queueing without individual confirmation requires explicit workspace-owner opt-in for the named connection, selected accounts, expiry and lifetime count.
+  - Publish now requires its own scope, an explicit separate opt-in, a selected account subset and an additional count limit.
+  - Respect team approval policy. The pilot only queues unchanged text-only drafts in workspaces without a separate approval requirement.
+  - Revoked or expired authority holds pending requests. A provider submission that crossed the in-flight marker must be reconciled.
+  - This workflow cannot approve team content, render media, send outreach, change billing or create paid ads.

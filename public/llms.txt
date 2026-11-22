@@ -1,0 +1,34 @@
+# AutoSocials
+
+> AutoSocials is an AI social growth workspace for brands and agencies. Its agent, Sam, helps plan, create, schedule and learn from organic TikTok, Instagram and Facebook content, and helps find TikTok and Instagram creators to work with.
+
+## Key facts
+- Website: https://autosocials.com
+- Agent: Sam, the AI social growth agent inside every workspace.
+- Workspace stages: Create, Schedule, Winners, Campaigns, Learn.
+- Channel features vary by account, permissions and format. See the product facts and developer guides for TikTok, Instagram, Facebook Pages and LinkedIn.
+- Pricing and current allowances: https://autosocials.com/pricing.
+- Agencies: partner programme with multi-client management and recurring commissions.
+- Sam asks for confirmation before sending, publishing, charging or deleting anything.
+
+## Limitations
+- The paid ads module has not been built.
+- Deleting a post in AutoSocials does not remove it from TikTok.
+
+## Pages
+- [Home](https://autosocials.com/): what AutoSocials and Sam do.
+- [Discover creators](https://autosocials.com/discover): free search of TikTok and Instagram creators.
+- [Pricing](https://autosocials.com/pricing): plans, trial and billing.
+- [Agency partner programme](https://autosocials.com/agency-platform): tools and commissions for agencies.
+- [Agency sign-up](https://autosocials.com/agency-signup): register an agency account.
+
+## Developer resources
+- [Developer documentation](https://autosocials.com/developers): guides, client paths, pricing and limits.
+- [MCP tool reference](https://autosocials.com/mcp-tools.json): scopes, schemas and status for the gated pilot.
+- The pilot includes workspace research, organic winner ranking, planning and calendar reads. Client compatibility requires verification.
+
+## More
+- [Public facts (JSON)](https://autosocials.com/api/public/facts)
+- [OpenAPI description](https://autosocials.com/openapi.json)
+- [Full page index](https://autosocials.com/llms-full.txt)
+- [Sitemap](https://autosocials.com/sitemap.xml)

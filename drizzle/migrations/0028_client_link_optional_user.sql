@@ -1,0 +1,1 @@
+ALTER TABLE public.agency_client_links ALTER COLUMN client_user_id DROP NOT NULL;
