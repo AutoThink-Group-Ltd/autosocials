@@ -1,14 +1,35 @@
 # AutoSocials
 
-AutoSocials is an open-source platform for social content planning, creation, research and scheduling. Connect compatible AI clients over MCP to work with your own AutoSocials workspace.
+**Turn research and brand knowledge into social content you can actually publish.**
 
-## Run AutoSocials
+AutoSocials is an AI social content workspace for marketers and agencies. Use audience and trend research to pick an angle, give it your brand's voice, then build the post, carousel or video around a clear idea. Connect compatible AI clients over MCP to work with your AutoSocials workspace.
 
-Start with the [self-hosting guide](docs/OPEN_SOURCE_SELF_HOST.md). Bring your own Supabase instance and provider credentials for the features you enable. The [API key guide](https://autosocials.com/developers/api-key-setup) lists the required and optional settings and how to check each connection.
+[Start with AutoSocials Cloud](https://autosocials.com/auth) · [Compare monthly credit plans](https://autosocials.com/pricing) · [Self-host AutoSocials](docs/OPEN_SOURCE_SELF_HOST.md)
 
-The release was tested with a clean Supabase database, the application container and a synthetic sign-in. Availability of production providers depends on your credentials and configuration. See the [agent capability matrix](docs/AGENT_CAPABILITY_MATRIX.md) for coverage and handoffs.
+## What you can make
 
-If you prefer a managed installation, visit [AutoSocials Cloud](https://autosocials.com/).
+- **LinkedIn carousels** — shape one argument across a sequence of slides, review the deck and export a PDF for LinkedIn.
+- **Social tiles** — turn a message into a branded graphic. Review the copy, visual direction and references before approving image generation.
+- **Motion graphics and whiteboard explainers** — build from a brief, storyboard and narration. On Cloud, available video formats include HyperFrames motion graphics and whiteboard-style videos, subject to the selected engine and its availability.
+- **Research you can use** — use Sam, Brand DNA and Organic Winners to turn audience questions and promising formats into ideas that fit your brand.
+
+## AutoSocials Cloud vs open source
+
+Choose Cloud to get straight to making content with managed hosting and configured production providers. Choose open source to run and customise the application on infrastructure you control.
+
+| | AutoSocials Cloud | Open source and self-hosted |
+| --- | --- | --- |
+| Getting started | Open an account and work in the hosted app. Connect your social accounts where supported. | Deploy the app, configure Supabase, run migrations and set up your environment. |
+| Production and credits | Choose a monthly credit plan. Estimates vary by engine and settings, and eligible jobs use your AutoSocials credit balance. | Supply the API keys for the features you enable. Provider accounts, usage charges and any required subscriptions are managed and paid for separately. |
+| Social publishing | Connect to available Cloud integrations. Formats vary by channel, account and permissions. | Set up the developer credentials, OAuth redirects and scopes for the providers you use. Some platforms may require app review. |
+| AI agents | Use the hosted MCP endpoint and grant scoped access to a workspace. The tool catalogue shows the current pilot capabilities. | Point your compatible MCP client at your deployment and configure its authentication and the providers it needs. |
+| Operations and control | AutoSocials operates and updates the hosted application. | You control the deployment and the source. You run upgrades, backups and maintenance, and manage the third-party services you connect. |
+
+Start with the [Cloud credit plans](https://autosocials.com/pricing), or follow the [self-hosting setup](docs/OPEN_SOURCE_SELF_HOST.md) and [provider key guide](https://autosocials.com/developers/api-key-setup). The open-source release was checked with a clean Supabase database, the app container and a synthetic sign-in. Feature availability depends on the release, credentials and configuration. See the [agent capability matrix](docs/AGENT_CAPABILITY_MATRIX.md) and [live MCP catalogue](https://autosocials.com/mcp-tools.json).
+
+## Built by a marketer
+
+AutoSocials was built by Kasim Javed, a seasoned marketer who runs Creative Marketing, a multi-million-pound agency. It is designed and maintained around the work agencies do every week, from researching an idea and shaping the message to reviewing creative and getting it ready to publish. [Kasim Javed on LinkedIn](https://www.linkedin.com/in/kasimjaved/)
 
 ## Licence
 
