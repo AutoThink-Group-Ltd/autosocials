@@ -27,6 +27,8 @@ Choose Cloud to get straight to making content with managed hosting and configur
 
 Start with the [Cloud credit plans](https://autosocials.com/pricing), or follow the [self-hosting setup](docs/OPEN_SOURCE_SELF_HOST.md) and [provider key guide](https://autosocials.com/developers/api-key-setup). The open-source release was checked with a clean Supabase database, the app container and a synthetic sign-in. Feature availability depends on the release, credentials and configuration. See the [agent capability matrix](docs/AGENT_CAPABILITY_MATRIX.md) and [live MCP catalogue](https://autosocials.com/mcp-tools.json).
 
+See how the workflow compares with Postiz, including a worked carousel, social tile and video brief. [Postiz vs AutoSocials](https://autosocials.com/compare/postiz-vs-autosocials)
+
 ## Built by a marketer
 
 AutoSocials was built by Kasim Javed, a seasoned marketer who runs Creative Marketing, a multi-million-pound agency. It is designed and maintained around the work agencies do every week, from researching an idea and shaping the message to reviewing creative and getting it ready to publish. [Kasim Javed on LinkedIn](https://www.linkedin.com/in/kasimjaved/)
