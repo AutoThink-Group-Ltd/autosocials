@@ -93,14 +93,14 @@ export async function researchNicheTrends(run: ResearchRun): Promise<TrendResult
     niche = inferred.niche;
     const year = new Date(checked_at).getUTCFullYear();
     const terms = [`${niche} social media video content styles trends ${year}`, `${niche} Instagram reels TikTok marketing examples ${year}`];
-    const searches = await Promise.allSettled(terms.map(async (query) => boundedJson(await fetch("https://api.firecrawl.dev/v1/search", {
+    const searches = await Promise.allSettled(terms.map(async (query) => boundedJson(await fetch("https://api.firecrawl.dev/v2/search", {
       method: "POST", headers: { Authorization: `Bearer ${searchKey}`, "Content-Type": "application/json" },
       body: JSON.stringify({ query, limit: 3 }), signal: signal(12_000), redirect: "error",
     }))));
     const candidates = new Map<string, { title: string; url: string }>();
     for (const result of searches) {
-      if (result.status !== "fulfilled" || !Array.isArray(result.value["data"])) continue;
-      for (const row of result.value["data"]) {
+      if (result.status !== "fulfilled" || !Array.isArray(object(result.value["data"])["web"])) continue;
+      for (const row of object(result.value["data"])["web"] as unknown[]) {
         const entry = object(row), url = publicUrl(entry["url"]);
         if (url && !candidates.has(url)) candidates.set(url, { url, title: text(entry["title"], 180) || new URL(url).hostname });
       }

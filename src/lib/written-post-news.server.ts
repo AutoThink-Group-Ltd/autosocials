@@ -6,14 +6,14 @@ export async function writtenPostNews(brief: string): Promise<{ sources: Source[
   const key = process.env["FIRECRAWL_API_KEY"]?.trim();
   if (!key) return { sources: [], status: "unavailable" };
   try {
-    const response = await fetch("https://api.firecrawl.dev/v1/search", {
+    const response = await fetch("https://api.firecrawl.dev/v2/search", {
       method: "POST", headers: { Authorization: `Bearer ${key}`, "Content-Type": "application/json" },
       body: JSON.stringify({ query: `${brief.slice(0, 500)} recent news developments`, limit: 5 }),
       signal: AbortSignal.timeout(12000), redirect: "error",
     });
     if (!response.ok) throw new Error("Search unavailable");
-    const payload = await response.json() as { data?: unknown };
-    const sources = (Array.isArray(payload.data) ? payload.data : []).flatMap((row: unknown) => {
+    const payload = await response.json() as { data?: { web?: unknown } };
+    const sources = (Array.isArray(payload.data?.web) ? payload.data.web : []).flatMap((row: unknown) => {
       if (!row || typeof row !== "object") return [];
       const item = row as Record<string, unknown>;
       const url = typeof item.url === "string" ? officialCreativeSiteUrl(item.url) : null;

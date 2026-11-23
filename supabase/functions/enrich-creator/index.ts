@@ -1,3 +1,4 @@
+import { firecrawlWebResults } from "../_shared/firecrawl.ts";
 const corsHeaders = {
   'Access-Control-Allow-Origin': '*',
   'Access-Control-Allow-Headers': 'authorization, x-client-info, apikey, content-type, x-supabase-client-platform, x-supabase-client-platform-version, x-supabase-client-runtime, x-supabase-client-runtime-version',
@@ -139,7 +140,7 @@ async function extractStatsFromGoogleSnippets(creator: any, updates: Record<stri
     const query = `"@${creator.username}" ${platformName}`;
     console.log('Google snippet search:', query);
 
-    const res = await fetch('https://api.firecrawl.dev/v1/search', {
+    const res = await fetch('https://api.firecrawl.dev/v2/search', {
       method: 'POST',
       headers: {
         'Authorization': `Bearer ${firecrawlKey}`,
@@ -154,7 +155,7 @@ async function extractStatsFromGoogleSnippets(creator: any, updates: Record<stri
 
     if (res.ok) {
       const data = await res.json();
-      const results = data.data || [];
+      const results = firecrawlWebResults(data);
       console.log(`Google search returned ${results.length} results`);
 
       // Look for the TikTok profile in results (most authoritative)
@@ -291,7 +292,7 @@ async function scrapeThirdPartyStats(creator: any, updates: Record<string, any>,
     if (updates.follower_count) break;
     try {
       console.log('Scraping third-party stats:', statsUrl);
-      const res = await fetch('https://api.firecrawl.dev/v1/scrape', {
+      const res = await fetch('https://api.firecrawl.dev/v2/scrape', {
         method: 'POST',
         headers: {
           'Authorization': `Bearer ${firecrawlKey}`,
@@ -336,7 +337,7 @@ async function scrapeVideoLinks(creator: any, updates: Record<string, any>, fire
   try {
     // Step 1: Direct scrape TikTok profile page for video links
     console.log('Direct-scraping TikTok profile for video links...');
-    const profileRes = await fetch('https://api.firecrawl.dev/v1/scrape', {
+    const profileRes = await fetch('https://api.firecrawl.dev/v2/scrape', {
       method: 'POST',
       headers: {
         'Authorization': `Bearer ${firecrawlKey}`,
@@ -368,7 +369,7 @@ async function scrapeVideoLinks(creator: any, updates: Record<string, any>, fire
     }
 
     // Step 2: Google search for additional videos
-    const res = await fetch('https://api.firecrawl.dev/v1/search', {
+    const res = await fetch('https://api.firecrawl.dev/v2/search', {
       method: 'POST',
       headers: {
         'Authorization': `Bearer ${firecrawlKey}`,
@@ -384,7 +385,7 @@ async function scrapeVideoLinks(creator: any, updates: Record<string, any>, fire
     if (res.ok) {
       const searchData = await res.json();
       const videoLinks: string[] = [];
-      for (const r of (searchData.data || [])) {
+      for (const r of (firecrawlWebResults(searchData))) {
         const url = r.url || '';
         if (url.includes('/video/') && url.includes(`@${creator.username}`)) {
           videoLinks.push(url);
@@ -677,7 +678,7 @@ async function enrichInstagramViaFirecrawl(creator: any, updates: Record<string,
   // Step 1: Direct profile scrape (most reliable for avatar + profile stats)
   try {
     console.log('Direct-scraping Instagram profile:', profileUrl);
-    const profileRes = await fetch('https://api.firecrawl.dev/v1/scrape', {
+    const profileRes = await fetch('https://api.firecrawl.dev/v2/scrape', {
       method: 'POST',
       headers: {
         'Authorization': `Bearer ${firecrawlKey}`,
@@ -727,7 +728,7 @@ async function enrichInstagramViaFirecrawl(creator: any, updates: Record<string,
   // Step 2: Google search fallback for missing metadata
   try {
     console.log('Searching Google for IG profile data:', username);
-    const searchRes = await fetch('https://api.firecrawl.dev/v1/search', {
+    const searchRes = await fetch('https://api.firecrawl.dev/v2/search', {
       method: 'POST',
       headers: {
         'Authorization': `Bearer ${firecrawlKey}`,
@@ -742,7 +743,7 @@ async function enrichInstagramViaFirecrawl(creator: any, updates: Record<string,
 
     if (searchRes.ok) {
       const data = await searchRes.json();
-      const results = data.data || [];
+      const results = firecrawlWebResults(data);
       console.log(`IG Google search returned ${results.length} results`);
 
       const collectedLinks: string[] = [];
@@ -787,7 +788,7 @@ async function enrichInstagramViaFirecrawl(creator: any, updates: Record<string,
   if (!updates.avatar_url) {
     try {
       console.log('Trying third-party for IG avatar...');
-      const thirdPartyRes = await fetch('https://api.firecrawl.dev/v1/search', {
+      const thirdPartyRes = await fetch('https://api.firecrawl.dev/v2/search', {
         method: 'POST',
         headers: {
           'Authorization': `Bearer ${firecrawlKey}`,
@@ -802,7 +803,7 @@ async function enrichInstagramViaFirecrawl(creator: any, updates: Record<string,
 
       if (thirdPartyRes.ok) {
         const data = await thirdPartyRes.json();
-        for (const r of (data.data || [])) {
+        for (const r of (firecrawlWebResults(data))) {
           const metadata = r.metadata || {};
           if (typeof metadata.ogImage === 'string' && metadata.ogImage.startsWith('http')) {
             updates.avatar_url = metadata.ogImage;
@@ -831,7 +832,7 @@ async function enrichInstagramViaFirecrawl(creator: any, updates: Record<string,
 
       const responses = await Promise.all(
         queries.map((query) =>
-          fetch('https://api.firecrawl.dev/v1/search', {
+          fetch('https://api.firecrawl.dev/v2/search', {
             method: 'POST',
             headers: {
               'Authorization': `Bearer ${firecrawlKey}`,
@@ -846,7 +847,7 @@ async function enrichInstagramViaFirecrawl(creator: any, updates: Record<string,
       for (const res of responses) {
         if (!res?.ok) continue;
         const payload = await res.json();
-        for (const result of payload.data || []) {
+        for (const result of firecrawlWebResults(payload)) {
           const url = typeof result.url === 'string' ? result.url : '';
           if (url.includes('/reel/') || url.includes('/p/')) {
             discovered.push(url);
@@ -1032,7 +1033,7 @@ async function deepContactEnrichment(creator: any, updates: Record<string, any>,
     if (contactDetails.email) break;
     
     try {
-      const res = await fetch('https://api.firecrawl.dev/v1/scrape', {
+      const res = await fetch('https://api.firecrawl.dev/v2/scrape', {
         method: 'POST',
         headers: {
           'Authorization': `Bearer ${firecrawlKey}`,

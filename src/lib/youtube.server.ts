@@ -116,8 +116,8 @@ export async function researchYouTubeProduction(title: string, channel: string) 
   const key = process.env["FIRECRAWL_API_KEY"];
   if (!key) return { sources: [], notice: "External source research isn't configured. The uploader's public description may still contain production credits." };
   const query = `${title.slice(0, 150)} ${channel.slice(0, 80)} how made tools Higgsfield -site:youtube.com -site:youtu.be`;
-  const response = await fetch("https://api.firecrawl.dev/v1/search", { method: "POST", headers: { Authorization: `Bearer ${key}`, "Content-Type": "application/json" }, body: JSON.stringify({ query, limit: 5 }), signal: AbortSignal.timeout(20_000) });
+  const response = await fetch("https://api.firecrawl.dev/v2/search", { method: "POST", headers: { Authorization: `Bearer ${key}`, "Content-Type": "application/json" }, body: JSON.stringify({ query, limit: 5 }), signal: AbortSignal.timeout(20_000) });
   if (!response.ok) return { sources: [], notice: "External source research is temporarily unavailable. Production tools and earnings remain unverified." };
-  const result = z.object({ data: z.array(z.object({ url: z.string().url(), title: z.string().optional(), description: z.string().optional() })).optional() }).parse(await response.json());
-  return { sources: (result.data ?? []).filter((s) => { const u = new URL(s.url); return u.protocol === "https:" && !/(^|\.)(youtube\.com|youtu\.be)$/.test(u.hostname); }), notice: "Search excerpts are untrusted leads, not confirmation that a tool made this exact video. Cite source URLs and attribute claims. No video, audio or transcript was watched or downloaded. Public views are not earnings; private revenue is unknown." };
+  const result = z.object({ data: z.object({ web: z.array(z.object({ url: z.string().url(), title: z.string().optional(), description: z.string().optional() })).optional() }).optional() }).parse(await response.json());
+  return { sources: (result.data?.web ?? []).filter((s) => { const u = new URL(s.url); return u.protocol === "https:" && !/(^|\.)(youtube\.com|youtu\.be)$/.test(u.hostname); }), notice: "Search excerpts are untrusted leads, not confirmation that a tool made this exact video. Cite source URLs and attribute claims. No video, audio or transcript was watched or downloaded. Public views are not earnings; private revenue is unknown." };
 }

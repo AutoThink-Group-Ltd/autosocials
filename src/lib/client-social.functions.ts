@@ -80,14 +80,14 @@ async function searchCandidates(name: string, site: string, key: string): Promis
   const host = new URL(site).hostname.replace(/^www\./, "");
   const platforms = ["instagram", "facebook", "tiktok", "youtube", "linkedin", "x", "substack", "reddit"];
   const results = await Promise.allSettled(platforms.map(async (platform) => {
-    const response = await fetch("https://api.firecrawl.dev/v1/search", {
+    const response = await fetch("https://api.firecrawl.dev/v2/search", {
       method: "POST", headers: { Authorization: `Bearer ${key}`, "Content-Type": "application/json" },
       body: JSON.stringify({ query: `${name} ${host} official ${platform}`, limit: 3 }),
       signal: AbortSignal.timeout(12_000), redirect: "error",
     });
     if (!response.ok) return [];
-    const body = await response.json() as { data?: { url?: string; title?: string; description?: string }[] };
-    return (body.data ?? []).flatMap((item) => item.url && parseClientSocialProfile(item.url) ? [{ url: item.url, title: item.title ?? "", description: item.description ?? "" }] : []);
+    const body = await response.json() as { data?: { web?: { url?: string; title?: string; description?: string }[] } };
+    return (body.data?.web ?? []).flatMap((item) => item.url && parseClientSocialProfile(item.url) ? [{ url: item.url, title: item.title ?? "", description: item.description ?? "" }] : []);
   }));
   return [...new Map(results.flatMap((result) => result.status === "fulfilled" ? result.value : []).map((item) => [item.url, item])).values()].slice(0, 15);
 }

@@ -1,3 +1,4 @@
+import { firecrawlWebResults } from "../_shared/firecrawl.ts";
 import { createClient } from "npm:@supabase/supabase-js@2.99.1";
 
 type Profile = { platform: string; handle: string; url?: string | null };
@@ -111,12 +112,12 @@ async function fetchMarketSearch(name: string, website: string | null, profile: 
   const host = website ? new URL(website).hostname.replace(/^www\./, "") : "";
   const terms = profileTerms(profile).join(" ");
   const query = cleanText([name, host, terms, "current sector market consumer and regulatory developments UK"].filter(Boolean).join(" "), 360);
-  const response = await fetch("https://api.firecrawl.dev/v1/search", {
+  const response = await fetch("https://api.firecrawl.dev/v2/search", {
     method: "POST", headers: { Authorization: `Bearer ${key}`, "Content-Type": "application/json" },
     body: JSON.stringify({ query, limit: 5 }), signal: AbortSignal.timeout(9_000), redirect: "error",
   });
   const payload = await readJson(response);
-  const rows = Array.isArray(payload.data) ? payload.data : [];
+  const rows = firecrawlWebResults(payload);
   return rows.slice(0, 5).flatMap((entry): Evidence["market"] => {
     const row = record(entry);
     const url = safeWebsite(row.url);

@@ -1,3 +1,4 @@
+import { firecrawlWebResults } from "../_shared/firecrawl.ts";
 const corsHeaders = {
   'Access-Control-Allow-Origin': '*',
   'Access-Control-Allow-Headers': 'authorization, x-client-info, apikey, content-type, x-supabase-client-platform, x-supabase-client-platform-version, x-supabase-client-runtime, x-supabase-client-runtime-version',
@@ -131,7 +132,7 @@ async function fetchTikTokEmbedProfileLinks(username: string) {
 }
 
 async function firecrawlScrape(url: string, firecrawlKey: string, waitFor = 4000) {
-  const res = await fetch('https://api.firecrawl.dev/v1/scrape', {
+  const res = await fetch('https://api.firecrawl.dev/v2/scrape', {
     method: 'POST',
     headers: {
       'Authorization': `Bearer ${firecrawlKey}`,
@@ -326,7 +327,7 @@ Deno.serve(async (req) => {
       // Step 2b: Direct scrape TikTok profile page for video links
       try {
         console.log('Direct-scraping TikTok profile page for video links...');
-        const profileScrapeRes = await fetch('https://api.firecrawl.dev/v1/scrape', {
+        const profileScrapeRes = await fetch('https://api.firecrawl.dev/v2/scrape', {
           method: 'POST',
           headers: {
             'Authorization': `Bearer ${firecrawlKey}`,
@@ -364,7 +365,7 @@ Deno.serve(async (req) => {
 
           const responses = await Promise.all(
             queries.map((query) =>
-              fetch('https://api.firecrawl.dev/v1/search', {
+              fetch('https://api.firecrawl.dev/v2/search', {
                 method: 'POST',
                 headers: {
                   'Authorization': `Bearer ${firecrawlKey}`,
@@ -383,7 +384,7 @@ Deno.serve(async (req) => {
           for (const res of responses) {
             if (!res?.ok) continue;
             const searchData = await res.json();
-            const results = searchData.data || [];
+            const results = firecrawlWebResults(searchData);
             resultCount += results.length;
 
             for (const result of results) {
@@ -424,7 +425,7 @@ Deno.serve(async (req) => {
 
           const responses = await Promise.all(
             queries.map((query) =>
-              fetch('https://api.firecrawl.dev/v1/search', {
+              fetch('https://api.firecrawl.dev/v2/search', {
                 method: 'POST',
                 headers: {
                   'Authorization': `Bearer ${firecrawlKey}`,
@@ -443,7 +444,7 @@ Deno.serve(async (req) => {
           for (const res of responses) {
             if (!res?.ok) continue;
             const payload = await res.json();
-            const results = payload.data || [];
+            const results = firecrawlWebResults(payload);
             resultCount += results.length;
             for (const result of results) {
               if (typeof result.url === 'string' && (result.url.includes('/reel/') || result.url.includes('/p/'))) {
