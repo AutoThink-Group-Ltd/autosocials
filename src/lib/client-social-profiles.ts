@@ -55,7 +55,7 @@ export function parseClientSocialProfile(value: string, chosenPlatform?: SocialP
 }
 
 export function extractWebsiteSocialProfiles(markdown: string, links: unknown): ClientSocialProfile[] {
-  const listed = Array.isArray(links) ? links.filter((link): link is string => typeof link === "string") : [];
+  const listed = Array.isArray(links) ? links.map((link) => typeof link === "string" ? link : link && typeof link === "object" && "url" in link && typeof link.url === "string" ? link.url : "").filter(Boolean) : [];
   const embedded = markdown.match(/https?:\/\/[^\s<>"'()]+/gi) ?? [];
   const profiles = [...listed, ...embedded].flatMap((url) => {
     const profile = parseClientSocialProfile(url.replace(/[.,;]+$/, ""));

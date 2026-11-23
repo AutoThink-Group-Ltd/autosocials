@@ -42,7 +42,7 @@ const ScrapingTechPage = () => {
                   <strong>Local DB cache</strong> – Searches <code className="bg-muted px-1 rounded">creator_profiles</code> for previously-scraped TikTok creators matching the query/niche.
                 </li>
                 <li>
-                  <strong>Firecrawl web search</strong> – Google search via <code className="bg-muted px-1 rounded">api.firecrawl.dev/v1/search</code> for <code className="bg-muted px-1 rounded">site:tiktok.com "@username"</code>.
+                  <strong>Firecrawl web search</strong> – Google search via <code className="bg-muted px-1 rounded">api.firecrawl.dev/v2/search</code> for <code className="bg-muted px-1 rounded">site:tiktok.com "@username"</code>.
                   Parses follower/like counts from result snippets using regex.
                 </li>
               </ol>

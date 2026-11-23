@@ -1,3 +1,4 @@
+import { firecrawlWebResults } from "../_shared/firecrawl.ts";
 const corsHeaders = {
   'Access-Control-Allow-Origin': '*',
   'Access-Control-Allow-Headers': 'authorization, x-client-info, apikey, content-type, x-supabase-client-platform, x-supabase-client-platform-version, x-supabase-client-runtime, x-supabase-client-runtime-version',
@@ -201,7 +202,7 @@ async function firecrawlFallback(username: string, supabase: any) {
 
   // Try direct scrape of Instagram profile page for avatar (og:image)
   try {
-    const directRes = await fetch('https://api.firecrawl.dev/v1/scrape', {
+    const directRes = await fetch('https://api.firecrawl.dev/v2/scrape', {
       method: 'POST',
       headers: {
         'Authorization': `Bearer ${firecrawlKey}`,
@@ -273,7 +274,7 @@ async function firecrawlFallback(username: string, supabase: any) {
   // Google search fallback for any missing data
   if (!profileData.follower_count || !profileData.avatar_url) {
     try {
-      const searchRes = await fetch('https://api.firecrawl.dev/v1/search', {
+      const searchRes = await fetch('https://api.firecrawl.dev/v2/search', {
         method: 'POST',
         headers: {
           'Authorization': `Bearer ${firecrawlKey}`,
@@ -288,7 +289,7 @@ async function firecrawlFallback(username: string, supabase: any) {
 
       if (searchRes.ok) {
         const data = await searchRes.json();
-        const results = data.data || [];
+        const results = firecrawlWebResults(data);
 
         for (const r of results) {
           const text = `${r.title || ''} ${r.description || ''} ${r.markdown || ''}`;

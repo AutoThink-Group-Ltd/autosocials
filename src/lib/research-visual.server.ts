@@ -84,10 +84,11 @@ async function ai(instructions: string, evidence: unknown, images: ResearchPost[
 async function search(query: string) {
   const key = process.env["FIRECRAWL_API_KEY"];
   if (!key) throw new Error("Comparable business search is unavailable");
-  const response = await fetch("https://api.firecrawl.dev/v1/search", { method: "POST", headers: { Authorization: `Bearer ${key}`, "Content-Type": "application/json" }, body: JSON.stringify({ query, limit: 5 }), signal: AbortSignal.timeout(15_000) });
+  const response = await fetch("https://api.firecrawl.dev/v2/search", { method: "POST", headers: { Authorization: `Bearer ${key}`, "Content-Type": "application/json" }, body: JSON.stringify({ query, limit: 5 }), signal: AbortSignal.timeout(15_000) });
   if (!response.ok) throw new Error("Comparable business search is unavailable");
   const result = object(await response.json());
-  return Array.isArray(result["data"]) ? result["data"].slice(0, 5).map(object) : [];
+  const web = object(result["data"])["web"];
+  return Array.isArray(web) ? web.slice(0, 5).map(object) : [];
 }
 
 async function findCompetitors(snapshot: Snapshot): Promise<VisualReport["competitors"]> {

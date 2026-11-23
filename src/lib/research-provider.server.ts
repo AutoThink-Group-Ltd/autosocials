@@ -37,7 +37,7 @@ export async function discoverResearchTargets(query: string): Promise<{ candidat
   const isWebsite = /^(?:https?:\/\/)?[\w.-]+\.[a-z]{2,}(?:\/|$)/i.test(query.trim());
   const searches = isWebsite ? [query.trim()] : ["instagram", "facebook", "tiktok"].map((platform) => `${query.trim()} official ${platform}`);
   const results = await Promise.allSettled(searches.map(async (term) => {
-    const endpoint = isWebsite ? "https://api.firecrawl.dev/v2/scrape" : "https://api.firecrawl.dev/v1/search";
+    const endpoint = isWebsite ? "https://api.firecrawl.dev/v2/scrape" : "https://api.firecrawl.dev/v2/search";
     const body = isWebsite ? { url: /^https?:\/\//i.test(term) ? term : `https://${term}`, formats: ["markdown", "links"] } : { query: term, limit: 5 };
     const response = await fetch(endpoint, { method: "POST", headers: { Authorization: `Bearer ${key}`, "Content-Type": "application/json" }, body: JSON.stringify(body), signal: AbortSignal.timeout(15_000) });
     if (!response.ok) throw new Error(`Search provider returned ${response.status}`);
@@ -48,7 +48,7 @@ export async function discoverResearchTargets(query: string): Promise<{ candidat
     if (result.status === "rejected") { warnings.push("Some account matches could not be checked."); continue; }
     const payload = result.value;
     const data = payload["data"];
-    const entries = Array.isArray(data) ? data : [data ?? payload];
+    const entries = isWebsite ? [data ?? payload] : (Array.isArray(record(data)["web"]) ? record(data)["web"] as unknown[] : []);
     for (const entry of entries) {
       const item = record(entry);
       const text = [item["url"], item["markdown"], item["description"], item["links"], item["metadata"]].map((x) => typeof x === "string" ? x : JSON.stringify(x ?? "")).join(" ");

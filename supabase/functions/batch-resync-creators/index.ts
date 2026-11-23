@@ -1,3 +1,4 @@
+import { firecrawlWebResults } from "../_shared/firecrawl.ts";
 const corsHeaders = {
   'Access-Control-Allow-Origin': '*',
   'Access-Control-Allow-Headers': 'authorization, x-client-info, apikey, content-type',
@@ -122,7 +123,7 @@ async function fetchViaFirecrawlSearch(username: string, platform: string, firec
     // Use a broader search to get Google snippets with stats
     const searchQuery = `site:${domain}/@${username}`;
 
-    const res = await fetch('https://api.firecrawl.dev/v1/search', {
+    const res = await fetch('https://api.firecrawl.dev/v2/search', {
       method: 'POST',
       headers: {
         'Authorization': `Bearer ${firecrawlKey}`,
@@ -140,7 +141,7 @@ async function fetchViaFirecrawlSearch(username: string, platform: string, firec
     }
 
     const searchData = await res.json();
-    const results = searchData.data || [];
+    const results = firecrawlWebResults(searchData);
 
     if (results.length === 0) return null;
 

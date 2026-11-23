@@ -1,3 +1,4 @@
+import { firecrawlWebResults } from "../_shared/firecrawl.ts";
 import { createClient } from 'https://esm.sh/@supabase/supabase-js@2.99.1';
 
 const corsHeaders = {
@@ -105,7 +106,7 @@ Deno.serve(async (req) => {
           if (emailFound) break;
           try {
             logStep(`Scraping website for ${creator.username}`, { url });
-            const res = await fetch('https://api.firecrawl.dev/v1/scrape', {
+            const res = await fetch('https://api.firecrawl.dev/v2/scrape', {
               method: 'POST',
               headers: {
                 'Authorization': `Bearer ${firecrawlKey}`,
@@ -139,7 +140,7 @@ Deno.serve(async (req) => {
           
           logStep(`Web searching for ${creator.username}`, { query: searchQuery });
           
-          const res = await fetch('https://api.firecrawl.dev/v1/search', {
+          const res = await fetch('https://api.firecrawl.dev/v2/search', {
             method: 'POST',
             headers: {
               'Authorization': `Bearer ${firecrawlKey}`,
@@ -154,7 +155,7 @@ Deno.serve(async (req) => {
 
           if (res.ok) {
             const searchData = await res.json();
-            const searchResults = searchData.data || [];
+            const searchResults = firecrawlWebResults(searchData);
             
             for (const result of searchResults) {
               if (emailFound) break;

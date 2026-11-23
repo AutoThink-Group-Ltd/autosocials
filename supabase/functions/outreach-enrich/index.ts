@@ -1,3 +1,4 @@
+import { firecrawlWebResults } from "../_shared/firecrawl.ts";
 import { createClient } from "https://esm.sh/@supabase/supabase-js@2.99.1";
 
 const cors = { "Access-Control-Allow-Origin": "*", "Access-Control-Allow-Headers": "authorization, x-client-info, apikey, content-type", "Access-Control-Allow-Methods": "POST, OPTIONS" };
@@ -44,9 +45,9 @@ Deno.serve(async req => {
  if(limitError) return json({error:"Contact lookup is unavailable"},503);
  if(!reserved) return json({error:"Contact lookup limit reached. Please try again later."},429);
  try {
-  const response=await fetch("https://api.firecrawl.dev/v1/search",{method:"POST",headers:{Authorization:`Bearer ${firecrawl}`,"Content-Type":"application/json"},body:JSON.stringify({query:`"${profile}" contact email`,limit:3,scrapeOptions:{formats:["markdown"],onlyMainContent:true}}),signal:AbortSignal.timeout(20000)});
+  const response=await fetch("https://api.firecrawl.dev/v2/search",{method:"POST",headers:{Authorization:`Bearer ${firecrawl}`,"Content-Type":"application/json"},body:JSON.stringify({query:`"${profile}" contact email`,limit:3,scrapeOptions:{formats:["markdown"],onlyMainContent:true}}),signal:AbortSignal.timeout(20000)});
   if(!response.ok) return json({error:"Contact lookup is unavailable"},502);
-  const result=await response.json(); const rows=Array.isArray(result.data)?result.data:[];
+  const result=await response.json(); const rows=firecrawlWebResults(result);
   for (const row of rows.slice(0,3)) {
    const source=canonicalProfile(row.url || row.metadata?.sourceURL,creator.username);
    if(source!==profile || typeof row.markdown!=="string") continue;

@@ -1,5 +1,5 @@
 import { describe, expect, it } from "vitest";
-import { parseClientSocialProfile } from "./client-social-profiles";
+import { extractWebsiteSocialProfiles, parseClientSocialProfile } from "./client-social-profiles";
 
 describe("parseClientSocialProfile", () => {
   it("detects a Pinterest profile on its UK domain", () => {
@@ -27,5 +27,18 @@ describe("parseClientSocialProfile", () => {
 
   it("does not detect lookalike domains as social profiles", () => {
     expect(parseClientSocialProfile("https://uk.pinterest.com.example.org/jamiltonupholstery/")).toBeNull();
+  });
+});
+
+
+describe("extractWebsiteSocialProfiles", () => {
+  it("accepts URL objects while rejecting malformed and lookalike links", () => {
+    const profiles = extractWebsiteSocialProfiles("", [
+      { url: "https://instagram.com/example" },
+      { url: "https://instagram.com.example.org/fake" },
+      { bad: "https://tiktok.com/@fake" },
+      "https://tiktok.com/@real",
+    ]);
+    expect(profiles.map((profile) => profile.handle).sort()).toEqual(["example", "real"]);
   });
 });

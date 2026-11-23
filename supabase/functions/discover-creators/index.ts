@@ -1,3 +1,4 @@
+import { firecrawlWebResults } from "../_shared/firecrawl.ts";
 const corsHeaders = {
   'Access-Control-Allow-Origin': '*',
   'Access-Control-Allow-Headers': 'authorization, x-client-info, apikey, content-type, x-supabase-client-platform, x-supabase-client-platform-version, x-supabase-client-runtime, x-supabase-client-runtime-version',
@@ -91,7 +92,7 @@ Deno.serve(async (req) => {
       // For TikTok or if Graph API failed: use Firecrawl
       if (platform === 'tiktok' || !profileData.follower_count) {
         try {
-          const scrapeRes = await fetch('https://api.firecrawl.dev/v1/scrape', {
+          const scrapeRes = await fetch('https://api.firecrawl.dev/v2/scrape', {
             method: 'POST',
             headers: {
               'Authorization': `Bearer ${firecrawlKey}`,
@@ -234,7 +235,7 @@ Deno.serve(async (req) => {
       }
 
       try {
-        const scrapeRes = await fetch('https://api.firecrawl.dev/v1/scrape', {
+        const scrapeRes = await fetch('https://api.firecrawl.dev/v2/scrape', {
           method: 'POST',
           headers: {
             'Authorization': `Bearer ${firecrawlKey}`,
@@ -294,7 +295,7 @@ Deno.serve(async (req) => {
       const allResults: any[] = [];
       const searchPromises = searchQueries.map(async (sq) => {
         try {
-          const searchResponse = await fetch('https://api.firecrawl.dev/v1/search', {
+          const searchResponse = await fetch('https://api.firecrawl.dev/v2/search', {
             method: 'POST',
             headers: {
               'Authorization': `Bearer ${firecrawlKey}`,
@@ -308,7 +309,7 @@ Deno.serve(async (req) => {
           });
           if (searchResponse.ok) {
             const searchData = await searchResponse.json();
-            const results = searchData.data || [];
+            const results = firecrawlWebResults(searchData);
             allResults.push(...results);
           }
         } catch (e) {
@@ -438,7 +439,7 @@ Deno.serve(async (req) => {
     
     const searchPromises = searchQueries.map(async (sq) => {
       try {
-        const searchResponse = await fetch('https://api.firecrawl.dev/v1/search', {
+        const searchResponse = await fetch('https://api.firecrawl.dev/v2/search', {
           method: 'POST',
           headers: {
             'Authorization': `Bearer ${firecrawlKey}`,
@@ -456,7 +457,7 @@ Deno.serve(async (req) => {
 
         if (searchResponse.ok) {
           const searchData = await searchResponse.json();
-          const results = searchData.data || [];
+          const results = firecrawlWebResults(searchData);
           console.log(`Query "${sq}" returned ${results.length} results`);
           return results;
         } else {
